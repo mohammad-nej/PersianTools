@@ -25,7 +25,8 @@ let package = Package(
             name: "PersianToolsTests",
             dependencies: ["PersianTools"],
             swiftSettings: [
-                .enableUpcomingFeature("ApproachableConcurrency"),
+                .swiftLanguageMode(.v6)
+                
             ],
         ),
     ]
