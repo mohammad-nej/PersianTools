@@ -20,32 +20,31 @@ public enum PersianConverter {
         if configuration.numbersOptions == .toPersian{
             copy = copy
             //Replace English Numbers
-                .replacingOccurrences(of: "0", with: "۰")
-                .replacingOccurrences(of: "1", with: "۱")
-                .replacingOccurrences(of: "2", with: "۲")
-                .replacingOccurrences(of: "3", with: "۳")
-                .replacingOccurrences(of: "4", with: "۴")
-                .replacingOccurrences(of: "5", with: "۵")
-                .replacingOccurrences(of: "6", with: "۶")
-                .replacingOccurrences(of: "7", with: "۷")
-                .replacingOccurrences(of: "8", with: "۸")
-                .replacingOccurrences(of: "9", with: "۹")
+                .replacing("0", with: "۰")
+                .replacing( "1", with: "۱")
+                .replacing("2", with: "۲")
+                .replacing( "3", with: "۳")
+                .replacing("4", with: "۴")
+                .replacing("5", with: "۵")
+                .replacing("6", with: "۶")
+                .replacing( "7", with: "۷")
+                .replacing( "8", with: "۸")
+                .replacing( "9", with: "۹")
             //Replace Arabic Numbers
-                .replacingOccurrences(of: "٠", with: "۰")
-                .replacingOccurrences(of: "١", with: "۱")
-                .replacingOccurrences(of: "٢", with: "۲")
-                .replacingOccurrences(of: "٣", with: "۳")
-                .replacingOccurrences(of: "٤", with: "۴")
-                .replacingOccurrences(of: "٥", with: "۵")
-                .replacingOccurrences(of: "٦", with: "۶")
-                .replacingOccurrences(of: "٧", with: "۷")
-                .replacingOccurrences(of: "٨", with: "۸")
-                .replacingOccurrences(of: "٩", with: "۹")
-            
+                .replacing("٠", with: "۰")
+                .replacing( "١", with: "۱")
+                .replacing("٢", with: "۲")
+                .replacing( "٣", with: "۳")
+                .replacing("٤", with: "۴")
+                .replacing( "٥", with: "۵")
+                .replacing( "٦", with: "۶")
+                .replacing( "٧", with: "۷")
+                .replacing( "٨", with: "۸")
+                .replacing("٩", with: "۹")
         }
         
         for item in configuration.convertableCharacters {
-            copy = copy.replacingOccurrences(of: String(item.original), with: String(item.replaceWith))
+            copy = copy.replacing( String(item.original), with: String(item.replaceWith))
         }
         
         return copy
